@@ -1,0 +1,36 @@
+.sub-hero-wrap{
+    height: 425px;
+
+    .sub-hero-top{
+
+        img{
+            object-fit: cover;
+            object-position: center;
+        }
+
+    }
+}
+
+.sub-quick-contact{
+    position: relative;
+    z-index: 11;
+    transform: translateY(-50%);
+    max-width: 400px; 
+    border-radius: 44px;
+    margin-bottom: -250px;
+}
+
+@media (min-width:1200px){
+    .sub-rocket{
+        height: 500px;
+    }
+}
+@media (min-width:1400px){
+    .sub-rocket{
+        height: 750px;
+
+        img{
+            top:50px
+        }
+    }
+}

@@ -1,0 +1,150 @@
+.hero-item{
+    background: #ffeef5;
+    height: 100vh;
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    .hero-img{
+        max-height: 90%;
+        width: auto;
+    }
+}
+
+.header{
+    background: url(../img/logo-sm.png) no-repeat top left;
+    padding-left: 40px;
+    padding-top: 10px;
+
+    > h2{
+        line-height: 1.1;
+        font-size: 55px;
+        font-weight: 700;
+        letter-spacing: -2px;
+        margin-bottom: 20px;
+        max-width: 450px;
+    }
+
+    > p{
+        font-size: 18px;
+    }
+
+    > a{
+        padding: 1rem 2rem;
+        transition: all .7s;
+        display: inline-block;
+
+        &.black{
+            border: 1px solid #1d1d1d;
+
+            &:hover{
+                color:#fff;
+                background: #1d1d1d;
+            }
+        }
+
+        &.white{
+            border: 1px solid #f1f1f1;
+            color:#ffffff;
+
+            &:hover{
+                color:#1d1d1d;
+                background: #ffffff;
+            }
+        }
+    }
+
+}
+
+@media (min-width:768px) and (max-width:1199.98px){
+    .hero-item{max-height: 900px;}
+}
+@media (max-width:1199.98px) {
+    .header{
+        padding-left: 40px;
+        padding-top: 20px;
+    
+        > h2{
+            line-height: 1.2;
+            font-size: 25px;
+            letter-spacing: -1px;
+        }
+    
+    }
+}
+
+@media (min-width:1200px) {
+    .header{
+        
+        p{
+            padding-right: 90px;
+        }
+    
+    }
+}
+
+.hb-step{
+    max-width: 200px;
+
+    img{
+        margin-bottom: 35px;
+    }
+        
+    span{
+        color: #429bd5;
+        transform: rotate(-19deg);
+    }
+}
+@media (max-width:767.98px){
+    .hb-step{
+    
+        img{
+           width: 85px;
+        }
+
+        span{
+           max-width: 80%;
+           display: block;
+        }
+    }
+}
+
+.hw-list{
+    color: #fff;
+    margin-left: 40px;
+
+    li{
+        a{
+            display: inline-block;
+            font-size: 17px;
+            letter-spacing: -1px;
+            position: relative;
+            font-weight: 500;
+            transition: all .7s;
+            margin-bottom: 8px;
+
+            &::after{
+                content: "";
+                position: absolute;
+                top: 50%;
+                width: 10px;
+                height: 3px;
+                background: transparent;
+                left: -19px;
+                transition: all .7s;
+            }
+
+            &:hover, &.active{
+                color: #f5c232;
+
+                &::after{
+                    background: #f5c232;
+                }
+            }
+        }
+    }
+}
+
+
+.book-check:checked + span {
+    background-color: #000;
+}
