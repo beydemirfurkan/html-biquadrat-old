@@ -3,6 +3,21 @@ function qAll(par){ return document.querySelectorAll(par) } //queryselectorAll s
 function cL(par) { console.log(par) }
 
 
+q(".contact-button").addEventListener("click", function (e) {
+   q(".contact-form").classList.add("active");
+});
+
+q(".close-contact").addEventListener("click", function(e) {
+  q(".contact-form").classList.remove("active");
+})
+
+q(".opened-menu").addEventListener("click", function (e) {
+    q(".menu-wrap").classList.add("active");
+})
+
+q(".closed-menu").addEventListener("click", function (e) {
+    q(".menu-wrap").classList.remove("active");
+})
 
 
 
@@ -47,32 +62,22 @@ window.addEventListener("scroll", function () {
     if(q(".top-nav")){
         if (window.scrollY > 150) {
             q(".top-nav").classList.add("bg-dark")
-            q(".top-nav .opened").classList.add("text-white")
-            q(".top-nav .logoimg").src="img/logowhite.png";
-            q(".webnav").classList.add("text-white")
-            qAll(".dropdown li")[0].classList.add("mt-3","text-blue");
-            qAll(".dropdown li")[1].classList.add("text-blue");
-            qAll(".dropdown li")[2].classList.add("text-blue");
-            qAll(".dropdown li")[3].classList.add("text-blue");
-            
+            q(".logochange .logoimg").src="img/logowhite.png";
+            q(".webnav1").classList.add("text-white");
 
+            
 
         }else {
-            q(".top-nav").classList.remove("bg-dark")
-            q(".top-nav .opened").classList.remove("text-white")
-            q(".top-nav .logoimg").src="img/logo.png";
-            q(".webnav").classList.remove("text-white")
-            qAll(".dropdown li")[0].classList.remove("mt-3","text-blue");
-            qAll(".dropdown li")[1].classList.remove("text-blue");
-            qAll(".dropdown li")[2].classList.remove("text-blue");
-            qAll(".dropdown li")[3].classList.remove("text-blue");
+            q(".top-nav").classList.remove("bg-dark");
+            q(".logochange .logoimg").src="img/logo.png";
+            q(".webnav1").classList.remove("text-white");
 
-            
 
         }
         
     }
 })
+
 
 
 // Counter
@@ -91,100 +96,119 @@ window.addEventListener("scroll", function () {
         }
       }
       updateCount();
-    }
+    };
 
 // End Counter
 
 
 
 
-q(".contact-button").addEventListener("click", function (e) {
-    q(".contact-form").classList.add("active");
-})
+let imgBtnler = document.querySelectorAll(".workus ul li");
+let imgAll = document.querySelectorAll(".photoindex .img-1 img");
 
-q(".contact-form").addEventListener("click", function (e) {
-    q(".contact-form").classList.remove("active");
-})
+if (imgBtnler[0].addEventListener("click",function(e) {
+  imgAll[0].src ="img/front/web11.png";
+  imgAll[1].src ="img/front/web22.png";
+  imgAll[2].src ="img/front/web33.png";
+  imgAll[3].src ="img/front/web44.png";
+  imgAll[4].src ="img/web555.png";
+  imgAll[5].src ="img/front/web66.png";
+  imgAll[6].src ="img/front/web77.png";
+  imgAll[7].src ="img/front/web88.png";
+  for(let i = 0; i<imgAll.length; i++) {
+    imgAll[i].setAttribute("onclick","document.location = 'sub-wesite.html'");
+  }})
+);
+else if (imgBtnler[1].addEventListener("click",function(e) {
+  imgAll[0].src ="img/front/sos1.png";
+  imgAll[1].src ="img/front/sos2.png";
+  imgAll[2].src ="img/front/sos3.png";
+  imgAll[3].src ="img/front/sos4.png";
+  imgAll[4].src ="img/front/sos5.png";
+  imgAll[5].src ="img/front/sos6.png";
+  imgAll[6].src ="img/front/sos7.png";
+  imgAll[7].src ="img/front/sos8.png";
+  for(let i = 0; i<imgAll.length; i++) {
+    imgAll[i].setAttribute("onclick","document.location = 'sub-soc.html'");
+  }})
+);
+ else if(imgBtnler[2].addEventListener("click",function(e) {
 
-q(".opened-menu").addEventListener("click", function (e) {
-    q(".menu-wrap").classList.add("active");
-})
+    imgAll[0].src ="img/front/log1.png";
+    imgAll[1].src ="img/front/log2.png";
+    imgAll[2].src ="img/front/log3.png";
+    imgAll[3].src ="img/front/log4.png";
+    imgAll[4].src ="img/front/log5.png";
+    imgAll[5].src ="img/front/log6.png";
+    imgAll[6].src ="img/front/log7.png";
+    imgAll[7].src ="img/front/log8.png";
 
-q(".closed-menu").addEventListener("click", function (e) {
-    q(".menu-wrap").classList.remove("active");
-})
+    for(let i = 0; i<imgAll.length; i++) {
+      imgAll[i].setAttribute("onclick","document.location = 'sub-marka-olustur.html'");
+    }})
+  );
+  
+  else if (imgBtnler[3].addEventListener("click",function(e) {
+    imgAll[0].src ="img/front/flog1.png";
+    imgAll[1].src ="img/front/flog22.png";
+    imgAll[2].src ="img/front/flog3.png";
+    imgAll[3].src ="img/front/flog4.png";
+    imgAll[4].src ="img/front/glog1.png";3
+    imgAll[5].src ="img/front/glog2.png";
+    imgAll[6].src ="img/front/glog3.png";
+    imgAll[7].src ="img/t1.png";
+    for(let i = 0; i<imgAll.length; i++) {
+      imgAll[i].setAttribute("onclick","document.location = 'sub-digi.html'");
+    }})
+  );
+  else (imgBtnler[4].addEventListener("click",function(e) {
+    imgAll[0].src ="img/front/glog1.png";
+    imgAll[1].src ="img/front/glog2.png";
+    imgAll[2].src ="img/front/glog3.png";
+    imgAll[3].src ="img/front/glog4.png";
+    imgAll[4].src ="img/front/flog1.png";
+    imgAll[5].src ="img/front/flog22.png";
+    imgAll[6].src ="img/front/flog3.png";
+    imgAll[7].src ="img/t1.png";
+    for(let i = 0; i<imgAll.length; i++) {
+      imgAll[i].setAttribute("onclick","document.location = 'index.html'");
+    }})
+  );
 
-// Neler Yaptık 
+  var btnContainer2 = document.getElementById("hw-list");
 
-
-
-filterSelection("all")
-function filterSelection(c) {
-  var x, i;
-  x = document.getElementsByClassName("filterDiv");
-  if (c == "all") c = "";
-  for (i = 0; i < x.length; i++) {
-    w3RemoveClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-  }
-}
-
-function w3AddClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
-  }
-}
-
-function w3RemoveClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    while (arr1.indexOf(arr2[i]) > -1) {
-      arr1.splice(arr1.indexOf(arr2[i]), 1);     
-    }
-  }
-  element.className = arr1.join(" ");
-}
-
-// Add active class to the current button (highlight it)
-var btnContainer = document.getElementById("filtrebtn");
-
-var btns = btnContainer.getElementsByClassName("btnfltr");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function(e){
-      e.preventDefault();
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
+  var btns2 = btnContainer2.getElementsByClassName("btnfltr2");
+  for (var i = 0; i < btns2.length; i++) {
+  btns2[i].addEventListener("click", function(e){
+    e.preventDefault();
+    var current2 = document.getElementsByClassName("active");
+    current2[0].className = current2[0].className.replace(" active", "");
     this.className += " active";
   });
 }
 
 
+  for (let i = 0; i<imgAll.length; i++) {
+    imgBtnler[i].addEventListener("click",function (e) {
+      document.querySelector(".photoindex").style.animation = 'filterfade .4s ease-in-out';
+      e.preventDefault();
+  
+      setTimeout( function () {
+        document.querySelector(".photoindex").style.animation = 'none';
+      },300 );
 
-
-
-  if(document.querySelector(".filtrebtn .btnfltr")) {
-   let btnLer =  document.querySelectorAll(".filtrebtn .btnfltr");
-
-    for (let i = 0; i<btnLer.length; i++) {
-      btnLer[i].addEventListener("click",function () {
-        document.querySelector(".ref-box").style.animation = 'filterfade .2s ease-in';
-
-        setTimeout( function () {
-          document.querySelector(".ref-box").style.animation = 'none';
-        },300 );
-      })
-    }
+    })
   }
 
 
 
 
-// End Neler Yaptık
+
+// Neler Yapt覺k 
+
+
+
+// End Neler Yapt覺k
 
 
 // Earth
@@ -242,14 +266,4 @@ function earthRotate(){
 
 
 
-
-
-      
-
-
-
-
-
-      
-    
 

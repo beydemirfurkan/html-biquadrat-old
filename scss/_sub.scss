@@ -1,36 +1,105 @@
-.sub-hero-wrap{
-    height: 425px;
 
-    .sub-hero-top{
+.accordion-button {
+    font-weight: 600;
+}
+.accordion-button:not(.collapsed) {
+    color: #000;
+    font-weight: 600;
+    background-color: #e7f1ff;
+    box-shadow: none;
+}
 
-        img{
-            object-fit: cover;
-            object-position: center;
-        }
+.accordion-item{
+    border: none;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    margin-bottom: 20px;
 
+    .accordion-body {
+        color: #888686;
     }
 }
 
-.sub-quick-contact{
-    position: relative;
-    z-index: 11;
-    transform: translateY(-50%);
-    max-width: 400px; 
-    border-radius: 44px;
-    margin-bottom: -250px;
-}
+// Contact
 
-@media (min-width:1200px){
-    .sub-rocket{
-        height: 500px;
-    }
-}
-@media (min-width:1400px){
-    .sub-rocket{
-        height: 750px;
+.contactus {
+    background: url(../img/hemen-bg.png);
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    .form-contactus {
+        background: white;
+        width: 500px;
+        height: 540px;
+        max-width: 100%;
+        max-height: 100%;
+        margin: auto;
+        margin-top: 50px;
+        padding: 35px 0px;
+        border-radius: 15px;
 
-        img{
-            top:50px
-        }
-    }
-}
+        .contactform {
+            input.col-12 {
+                background: transparent;
+                border: 0;
+                border-bottom: 1px solid #666666;
+                border-radius: 0;
+                &:focus {
+                    outline: 0 !important;
+                    border-bottom: 1px solid rgb(90, 89, 89);
+                }
+                &::placeholder {
+                    color: #666666;
+                    font-size: 0.8em;
+                }
+              }
+          }
+          .contact-btn {
+            background: #304dff;
+            color: white;
+            border: 0;
+            margin-top: 45px;
+            border-radius: 10px;
+          }
+          
+          .form-contactus label {
+            color: #666666;
+          }
+          
+          .form-check span {
+            text-decoration: underline;
+            color: #000;
+          }
+          
+      }
+
+  }
+
+  .category-inner {
+      background: #fceefc;
+      color: #546379;
+      max-width: 100%;
+      height: auto;
+      padding: 2rem 1rem;
+      text-align: center;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all .3s ease-in-out;
+
+      a {
+          color: inherit;
+      }
+      
+      &:hover {
+          background: #e7f1ff;
+          color: black;
+      }
+  }
+  
+
+
+
+
+  
+
+  
